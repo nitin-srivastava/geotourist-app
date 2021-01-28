@@ -3,6 +3,7 @@ class Api::V1::UsersController < Api::ApplicationController
 
   def update
     if @user.update(user_params)
+      @user.update_analytics
       render nothing: true, status: :ok
     else
       render nothing: true, status: :bad_request

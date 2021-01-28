@@ -6,7 +6,7 @@ class View < ApplicationRecord
   geocoded_by :full_address
   after_validation :geocode, if: ->(obj) { obj.full_address.present? and obj.full_address_changed? }
 
-  def publish_location
+  def update_analytics
     ActionCable.server.broadcast('view_analytics_channel', location: self.full_address)
   end
 end

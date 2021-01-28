@@ -5,7 +5,7 @@ class Api::V1::ViewsController < Api::ApplicationController
   def create
     @view = @tour.views.new(view_params)
     if @view.save
-      @view.publish_location
+      @view.update_analytics
       render nothing: true, status: :ok
     else
       render nothing: true, status: :bad_request
