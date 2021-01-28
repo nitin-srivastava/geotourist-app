@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       end
       resources :users, only: :update
       resources :points, only: :update
+      resources :visits, only: :create
     end
   end
 

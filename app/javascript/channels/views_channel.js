@@ -10,10 +10,10 @@ consumer.subscriptions.create("ViewsChannel", {
   },
 
   received(data) {
-    this.totalUserViews(data.total_user_views)
-    this.totalTourViews(data.total_tour_views)
-    this.totalPointViews(data.total_point_views)
-    this.mostViewedTour(data.most_viewed_tour)
+    this.totalUserViews(data.total_user_views);
+    this.totalTourViews(data.total_tour_views);
+    this.totalPointViews(data.total_point_views);
+    this.mostViewedTour(data.most_viewed_tour);
     this.latestViewLocation(data.location);
   },
 
