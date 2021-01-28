@@ -5,6 +5,7 @@ RSpec.describe Api::V1::VisitsController, type: :controller do
 
   describe 'POST create' do
     before do
+      allow_any_instance_of(Visit).to receive(:update_analytics).and_return(true)
       post :create, params: { visit: { point_id: point.id } }, format: :json
     end
 
