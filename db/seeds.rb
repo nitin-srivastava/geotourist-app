@@ -13,7 +13,9 @@ User.destroy_all
 puts 'Create First hundred users and their associated tours and points'
 first_hundred_users = FactoryBot.create_list(:user, 100)
 first_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -27,7 +29,9 @@ sleep 3
 puts 'Create Second hundred users and their associated tours and points'
 second_hundred_users = FactoryBot.create_list(:user, 100)
 second_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -41,7 +45,9 @@ sleep 3
 puts 'Create Third hundred users and their associated tours and points'
 third_hundred_users = FactoryBot.create_list(:user, 100)
 third_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -55,7 +61,9 @@ sleep 3
 puts 'Create Fourth hundred users and their associated tours and points'
 fourth_hundred_users = FactoryBot.create_list(:user, 100)
 fourth_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -69,7 +77,9 @@ sleep 3
 puts 'Create Fifth hundred users and their associated tours and points'
 fifth_hundred_users = FactoryBot.create_list(:user, 100)
 fifth_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -83,7 +93,9 @@ sleep 3
 puts 'Create Sixth hundred users and their associated tours and points'
 sixth_hundred_users = FactoryBot.create_list(:user, 100)
 sixth_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -97,7 +109,9 @@ sleep 3
 puts 'Create Seventh hundred users and their associated tours and points'
 seventh_hundred_users = FactoryBot.create_list(:user, 100)
 seventh_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -111,8 +125,10 @@ sleep 3
 puts 'Create Eighth hundred users and their associated tours and points'
 eighth_hundred_users = FactoryBot.create_list(:user, 100)
 eighth_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
     print '.'
+    tour.update_analytics
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
 end
@@ -125,7 +141,9 @@ sleep 3
 puts 'Create Ninth hundred users and their associated tours and points'
 ninth_hundred_users = FactoryBot.create_list(:user, 100)
 ninth_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
@@ -139,7 +157,9 @@ sleep 3
 puts 'Create Tenth hundred users and their associated tours and points'
 tenth_hundred_users = FactoryBot.create_list(:user, 100)
 tenth_hundred_users.each do |user|
+  user.update_analytics
   FactoryBot.create_list(:tour, 10, user: user) do |tour|
+    tour.update_analytics
     print '.'
     FactoryBot.create_list(:point, 10, full_address: nil, tour: tour)
   end
