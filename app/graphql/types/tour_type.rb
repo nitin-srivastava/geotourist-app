@@ -5,5 +5,6 @@ module Types
     field :description, String, null: true
     field :user, Types::UserType, null: true
     field :points, [Types::PointType], null: true
+    field :views, [Types::ViewType], null: true
   end
 end
