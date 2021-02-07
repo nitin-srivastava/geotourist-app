@@ -1,4 +1,4 @@
-class Api::V1::VisitsController < Api::ApplicationController
+class Api::V1::VisitsController < Api::V1::ApplicationController
 
   def create
     @visit = Visit.new(visit_params)
