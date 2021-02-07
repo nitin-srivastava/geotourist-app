@@ -1,4 +1,4 @@
-class Api::V1::PointsController < Api::ApplicationController
+class Api::V1::PointsController < Api::V1::ApplicationController
   before_action :set_point
 
   def update

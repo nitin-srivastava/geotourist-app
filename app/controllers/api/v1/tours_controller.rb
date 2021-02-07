@@ -1,4 +1,4 @@
-class Api::V1::ToursController < Api::ApplicationController
+class Api::V1::ToursController < Api::V1::ApplicationController
   before_action :set_tour
 
   def update

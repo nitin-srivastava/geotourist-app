@@ -1,4 +1,4 @@
-class Api::V1::ViewsController < Api::ApplicationController
+class Api::V1::ViewsController < Api::V1::ApplicationController
   before_action :set_view, only: :update
 
   def create

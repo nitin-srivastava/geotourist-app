@@ -1,4 +1,4 @@
 module Api
-  class ApplicationController < ActionController::API
+  class V1::ApplicationController < ActionController::API
   end
 end
