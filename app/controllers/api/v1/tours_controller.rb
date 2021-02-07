@@ -3,7 +3,6 @@ class Api::V1::ToursController < Api::V1::ApplicationController
 
   def update
     if @tour.update(tour_params)
-      @tour.update_analytics
       render nothing: true, status: :ok
     else
       render nothing: true, status: :bad_request

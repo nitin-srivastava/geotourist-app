@@ -15,5 +15,53 @@ module Types
     def user(id:)
       User.find(id)
     end
+
+    # /tours
+    field :tours, [Types::TourType], null: true
+
+    def tours
+      Tour.all
+    end
+
+    # /tour
+    field :tour, Types::TourType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def tour(id:)
+      Tour.find(id)
+    end
+
+    # /points
+    field :points, [Types::PointType], null: true
+
+    def points
+      Point.all
+    end
+
+    # /point
+    field :point, Types::PointType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def point(id:)
+      Point.find(id)
+    end
+
+    # /views
+    field :views, [Types::ViewType], null: true
+
+    def views
+      View.all
+    end
+
+    # /view
+    field :view, Types::ViewType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def view(id:)
+      View.find(id)
+    end
   end
 end
