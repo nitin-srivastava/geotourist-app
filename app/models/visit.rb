@@ -1,7 +1,7 @@
 class Visit < ApplicationRecord
+  include UpdatableChannels
   belongs_to :point
 
-  def update_analytics
-    ActionCable.server.broadcast('visit_channel', total_point_visits: Visit.count)
-  end
+  after_create :update_analytics
+  after_destroy :update_analytics
 end
