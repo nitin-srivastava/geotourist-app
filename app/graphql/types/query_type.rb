@@ -47,5 +47,21 @@ module Types
     def point(id:)
       Point.find(id)
     end
+
+    # /views
+    field :views, [Types::ViewType], null: true
+
+    def views
+      View.all
+    end
+
+    # /view
+    field :view, Types::ViewType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def view(id:)
+      View.find(id)
+    end
   end
 end

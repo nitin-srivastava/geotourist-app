@@ -3,10 +3,10 @@ module Mutations
     field :point, Types::PointType, null: false
     field :errors, [String], null: false
 
-    argument :tour_id, ID, required: true
+    argument :attributes, Types::PointAttributes, required: true
 
-    def resolve(tour_id:)
-      point = Point.new(tour_id: tour_id)
+    def resolve(attributes:)
+      point = Point.new(attributes.to_h)
       if point.save
         {
             point: point,
