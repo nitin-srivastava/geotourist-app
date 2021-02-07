@@ -3,5 +3,6 @@ module Types
     field :id, ID, null: false
     field :name, String, null: true
     field :email, String, null: true
+    field :tours, [TourType], null: true
   end
 end
