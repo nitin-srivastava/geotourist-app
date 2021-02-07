@@ -31,5 +31,21 @@ module Types
     def tour(id:)
       Tour.find(id)
     end
+
+    # /points
+    field :points, [Types::PointType], null: true
+
+    def points
+      Point.all
+    end
+
+    # /point
+    field :point, Types::PointType, null: true do
+      argument :id, ID, required: true
+    end
+
+    def point(id:)
+      Point.find(id)
+    end
   end
 end
