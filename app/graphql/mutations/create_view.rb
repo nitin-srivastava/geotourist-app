@@ -8,6 +8,7 @@ module Mutations
     def resolve(attributes:)
       view = View.new(attributes.to_h)
       if view.save
+        view.update_analytics
         {
             view: view,
             errors: []
