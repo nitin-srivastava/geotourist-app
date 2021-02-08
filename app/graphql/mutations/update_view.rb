@@ -9,6 +9,7 @@ module Mutations
     def resolve(id:, attributes:)
       view = View.find(id)
       if view.update(attributes.to_h)
+        view.update_analytics
         {
             view: view,
             errors: []
