@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe Api::V1::UsersController, type: :controller do
   let(:user) { create(:user) }
 
+  before do
+    allow_any_instance_of(User).to receive(:update_analytics).and_return(true)
+  end
+
   describe 'PATCH update' do
     before do
       patch :update, params: { id: user_id,

@@ -10,4 +10,10 @@ class User < ApplicationRecord
 
   after_create :update_analytics
   after_destroy :update_analytics
+
+  def self.update_random_user
+    random_user = self.order(Arel.sql('RANDOM()')).first
+    return if random_user.nil?
+    random_user.update(name: Faker::Name.name, email: Faker::Internet.email)
+  end
 end

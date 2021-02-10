@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe Api::V1::ToursController, type: :controller do
   let(:tour) { create(:tour) }
 
+  before do
+    allow_any_instance_of(Tour).to receive(:update_analytics).and_return(true)
+  end
+
   describe 'PATCH update' do
     let(:view) { create(:view) }
     before do
