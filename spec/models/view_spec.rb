@@ -19,7 +19,7 @@ RSpec.describe View, type: :model do
       View.add_random_views
     end
 
-    it 'should have these models' do
+    it 'should have valid view' do
       expect(View.count).to eq(1)
     end
   end

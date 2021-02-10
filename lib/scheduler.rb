@@ -8,6 +8,7 @@ class Scheduler
   def start
     scheduler.every '1s' do
       View.add_random_views
+      User.update_random_user
     end
   end
 
