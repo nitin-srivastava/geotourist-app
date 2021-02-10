@@ -1,6 +1,7 @@
 require 'rufus/scheduler'
 class Scheduler
   attr_accessor :scheduler
+
   def initialize
     @scheduler = Rufus::Scheduler.new
   end

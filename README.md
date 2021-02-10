@@ -44,6 +44,17 @@ I have used `rspec` for REST API testing. Please note, I didn't write any test c
 $ bundle exec rake db:migrate db:test:prepare
 $ bundle exec rspec
 ```
+### Simulate CREATE and UPDATE operations on the database
+I have added a `lib/schedule.rb` to simulate the below operations on the database.
+* The CREATE operation to add a randomly generated view to a tour.
+* The UPDATE operation to update a randomly selected user. 
+
+Run the below commands to start the simulators.
+```
+$ scheduler = Scheduler.new
+$ scheduler.start # To start the simulator.
+$ scheduler.stop # To stop the simulator.
+```
 
 ### Available APIs
 This app has two APIs.
